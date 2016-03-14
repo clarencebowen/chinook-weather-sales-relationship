@@ -90,7 +90,7 @@ SELECT * FROM tbl_stats;
 
 Your output should match:
 
-TableName | RowCount
+table_name | cnt
 --- | ---
 `Artist`|`275`
 `Employee`|`8`
@@ -113,7 +113,7 @@ Your output should yield 96301 rows where
 96301 = 1817 (number of dates in range [2009-01-01, 2013-12-22] ) * 53 (number of customer city,state,country combination). Execute `SELECT COUNT(*) FROM "WeatherSales";`Your output should yield 411 rows. The grain of this table is ("City", "State", "Country", "Date")
 
 - Do some preliminary analysis in postgresql before loading into R (for further analysis). Recall that we are assuming a linear regression model. We are looking for the best-fit line 
-that goes through the (X,Y) data pairs taken from population with form:
+that goes through the plot of (X,Y) pairs taken from population with form:
 
 Y = AX + B,
 
@@ -145,10 +145,10 @@ For this we'll use statistical tool R.
 - Look for "[replace with your password here]", and replace with your password. For example, if your password is "pass123" then change line to `pw <- {"pass123"}`.
 - Change connection settings for the "con" variable to those of your own.
 - Save the file.
-- Click on "Source" button (top-right).After a few seconds, a scatterplot with a regression line should have been plotted. The scatterplot should match that of this repo (scatterplot.pdf). Note no discernable relationship in the scatterplot.
-- In RStudio console, type "regrLine" and hit <Enter>.
+- Click on "Source" button (top-right). After a few seconds, a scatterplot with a regression line should have been plotted. The scatterplot should match that of this repo (weathersales.pdf). Note no discernable relationship in the scatterplot.
+- In RStudio console, type "regrLine" and hit the "Enter" key.
 
-Note the Intercept and sales$TempAvg (linear regression slope) match the values obtained
+Note the Intercept and linear regression slope match the values obtained
 using the statistical functions in postgresql:
 	`Intercept: 5.397684      Slope: 0.001008`  
 
@@ -156,5 +156,5 @@ Running `cor(sales$UnitsSoldCnt , sales$TempAvg)` should also obtain `0.00641842
 
 
 ####Conclusion
-Given the chinook database and (randomly-generated) weather dataset, we were able to find a correlation of near-zero between total number of units sold and average daily temperature, suggesting little to no linear relationship. Moreover the scatterplot  appears to show no weather-sales relationship.
+Given the sample sales data in the chinook database and (randomly-generated) weather dataset, we were able to find a correlation of near-zero between total number of units sold and average daily temperature, suggesting little to no linear relationship. Moreover the scatterplot  appears to show no weather-sales relationship.
 
