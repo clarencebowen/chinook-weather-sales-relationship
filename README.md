@@ -137,10 +137,10 @@ Notice that the regression slope estimator "b" is approximately 0. Moreover the 
 independent and dependent is also virtually 0.
 From this we can we infer that there is no linear relationship between "TempAvg" and "UnitsSoldCnt".
 We should expect this since the weather data was randomly generated. 
-However, before making a conclusion let's explore the relationship especially looking at the (x,y) scatterplot.
+However, before making a conclusion let's explore the relationship further especially in terms of looking at the (x,y) scatterplot.
 For this we'll use statistical tool R.
 
-- Download weathersales.r to a directory on your computer RStudio can access. This script creates the 2 additional tables related to the daily weather and a daily weather with sales.
+- Download weathersales.r to a directory on your computer RStudio can access. This script imports the WeatherSales table into R as a dataframe, and creates both a scatter plot and plot of linear regression line of the data.
 - Open RStudio. Go to File>Open File..., and open weathersales.r
 - Look for "[replace with your password here]", and replace with your password. For example, if your password is "pass123" then change line to `pw <- {"pass123"}`.
 - Change connection settings for the "con" variable to those of your own.
@@ -156,5 +156,5 @@ Running `cor(sales$UnitsSoldCnt , sales$TempAvg)` should also obtain `0.00641842
 
 
 ####Conclusion
-A correlation of near-zero suggests little to no linear relationship. Also looking at the scatterplot appears to show no weather-sales relationship where sales is defined by the total number of units sold daily, and weather as the average daily temperature.
+Given the chinook database and (randomly-generated) weather dataset, we were able to find a correlation of near-zero between total number of units sold and average daily temperature, suggesting little to no linear relationship. Moreover the scatterplot  appears to show no weather-sales relationship.
 
