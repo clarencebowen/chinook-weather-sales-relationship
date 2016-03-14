@@ -39,7 +39,7 @@ It is, therefore, the goal of this report to measure the strength of such *linea
 Next, we need to identify a data source (or sources) for our weather explanatory variables. Googling for open weather datasets using keywords "average daily weather" yields [Weather Base](http://www.weatherbase.com/) as one example website that contains an archive of seemingly accurate average daily weather measurements for cities globally. Let's assume that we were able to import the data into a table (via webscraping using PHP or Python, for example). However in this report, we actually create fictitious weather data generated randomly.
 
 
-The steps file goes into details. 
+The following steps goes into details. 
 
 
 
