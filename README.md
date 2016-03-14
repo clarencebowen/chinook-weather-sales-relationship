@@ -49,8 +49,8 @@ The following steps goes into details.
 ###Setup and Testing
 
 Software Required:
-[Postgres & pgAdmin III (recommended)] (http://www.postgresql.org/download/) 
-R/[RStudio] (https://www.rstudio.com/products/rstudio/download/)
+- [Postgres & pgAdmin III (recommended)] (http://www.postgresql.org/download/) 
+- R/[RStudio] (https://www.rstudio.com/products/rstudio/download/)
 
 Steps:
 
