@@ -3,7 +3,9 @@
 ###Summary
 
 The objective of this report is to measure the type and strength of relationship (if one exists)
-between weather and music sales as provided in the [Chinook database](https://chinookdatabase.codeplex.com/). 
+between weather and music sales as provided in the [Chinook database](https://chinookdatabase.codeplex.com/). After several sessions with the client to gather business requirements, discuss the data model, data quality, data sources, etc.,  I was given full unsupervised authority to come up with a report to address this problem.
+
+
 First, we should clarify what exactly is meant by "weather" and "sales".
 
 After examining the Chinook database schema, we could define "sales" in one of several ways: 
